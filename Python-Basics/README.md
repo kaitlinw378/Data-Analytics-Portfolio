@@ -27,7 +27,7 @@ Make sure you are in the `Python-Basics` folder when running this command.
 
 ### Running Jupyter Notebooks
 
-To run `pandas_intro.ipynb`:
+To run `pandas_intro.ipynb` without using any IDE extension:
 
 1. Start Jupyter in the folder:
 
@@ -35,22 +35,47 @@ To run `pandas_intro.ipynb`:
 jupyter notebook
 ```
 
-2. Open `pandas_intro.ipynb` in the browser
+2. Open `pandas_intro.ipynb` in the [browser](http://localhost:8888)
 
 3. Run the cells sequentially to see the outputs
 
+To run `pandas_intro.ipynb` with IDE extension:
+
+1. Press `Run All` play button at the top of the notebook file or run each cell sequentially
+
+## Dataset
+
+This Jupyter project uses the [Titanic dataset](https://raw.githubusercontent.com/pandas-dev/pandas/main/doc/data/titanic.csv) from the pandas documentation.
+
+The dataset is including in the `/data` folder for convenience.
+
 ## Dependencies
 
-Requires Python3 and the following Python packages:
+Requires Python3 and depends on the packages listed in `requirements.txt`.
 
-- `pandas`
+### Setup
 
-- `matplotlib`
-
-If any package is missing, you can it stall it using pip:
+1. **Create and activate a virtual environment:**
 
 ```bash
-pip install pandas matplotlib
+python3 -m venv venv
+source venv/bin/activate
+```
+
+2. **Install project dependencies:**
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+3. **Install Jupyter (if not already installed and no IDE extension is used):**
+```bash
+pip install notebook
+```
+
+Note: To deactivate the virtual environment when done:
+```bash
+deactivate
 ```
 
 ## Purpose
